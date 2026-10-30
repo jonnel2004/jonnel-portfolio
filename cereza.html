@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonnel Cereza | Portfolio Dashboard</title>
+  <!-- Font Awesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="cereza.css?V=5">
+</head>
+<body class="home-view">
+
+  <!-- SIDEBAR NAVIGATION -->
+  <aside>
+    <div class="profile-card">
+      <div class="profile-avatar">
+        <img src="profile.jpeg" alt="Profile picture">
+      </div>
+      <h2>Jonnel Cereza <span>✓</span></h2>
+      <p>@jonnelcereza</p>
+    </div>
+
+    <!-- SOCIAL LINKS -->
+    <div class="social-links">
+      <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://discord.com" target="_blank"><i class="fa-brands fa-discord"></i></a>
+      <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+    </div>
+
+    <nav class="nav-menu">
+      <a href="#home" class="nav-item active"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="#projects" class="nav-item"><i class="fa-solid fa-folder"></i> Projects</a>
+      <a href="#services" class="nav-item"><i class="fa-solid fa-gear"></i> Services</a>
+      <a href="#skills" class="nav-item"><i class="fa-solid fa-gem"></i> Skills</a>
+      <a href="#testimonials" class="nav-item"><i class="fa-solid fa-star"></i> Testimonials</a>
+      <a href="#about" class="nav-item"><i class="fa-solid fa-user"></i> About</a>
+      <a href="#contact" class="nav-item"><i class="fa-solid fa-envelope"></i> Contact</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN CONTENT AREA -->
+  <main>
+
+    <!-- 1. HOME SECTION -->
+    <section id="home">
+      <h2>Hi, I'm Jonnel Cereza 👋</h2>
+      <p>Freshman IT Student | UI/UX Designer & Creative Tech Developer from Albay, Bicol.</p>
+      
+      <div class="bento-card span-12 tools-banner">
+        <p><i class="fa-solid fa-code"></i> Tools I work with: Canva, VS Code, HTML/CSS, JavaScript</p>
+      </div>
+
+      <!-- 3-Column Grid Dashboard -->
+      <div class="home-dashboard-grid">
+        
+        <!-- 1. Project Card Preview -->
+        <div class="preview-card" onclick="navigateTo('#projects')">
+          <h3>Projects</h3>
+          <p class="preview-desc">Pubmats, Invitations & Web UI</p>
+          <div class="preview-btns-row">
+            <div class="preview-btn-item">Pubmat</div>
+            <div class="preview-btn-item">Invite</div>
+          </div>
+        </div>
+
+        <!-- 2. About Card Preview -->
+        <div class="preview-card" onclick="navigateTo('#about')">
+          <h3>About Me</h3>
+          <div class="about-preview-content">
+            <img src="about.jpeg" alt="Jonnel">
+            <p>Freshman IT Student | UI/UX Designer mula sa Albay, Bicol.</p>
+          </div>
+        </div>
+
+        <!-- 3. Skills Card Preview -->
+        <div class="preview-card" onclick="navigateTo('#skills')">
+          <h3>Skills</h3>
+          <div class="skill-preview-list">
+            <div class="skills-preview-item">
+              <span>Canva</span>
+              <div class="mini-bar"><div style="width: 95%;"></div></div>
+            </div>
+            <div class="skills-preview-item">
+              <span>Photo Editing</span>
+              <div class="mini-bar"><div style="width: 90%;"></div></div>
+            </div>
+            <div class="skills-preview-item">
+              <span>JavaScript</span>
+              <div class="mini-bar"><div style="width: 65%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Services Card Preview -->
+        <div class="preview-card" onclick="navigateTo('#services')">
+          <h3>Services</h3>
+          <div class="services-preview-text">
+            <span>🎨 Graphic & Pubmat Design</span>
+            <span>💻 UI/UX Website Designer</span>
+          </div>
+        </div>
+
+        <!-- 5. Contact Card Preview -->
+        <div class="preview-card" onclick="navigateTo('#contact')">
+          <h3 class="highlight-title">Contact</h3>
+          <div class="contact-preview-list">
+            <span><i class="fa-solid fa-envelope"></i> cerezajonnel1@gmail.com</span>
+            <span><i class="fa-solid fa-phone"></i> 09202244064</span>
+            <span><i class="fa-solid fa-location-dot"></i> Anislag, Daraga, Albay</span>
+          </div>
+        </div>
+
+        <!-- 6. Testimonials Card Preview -->
+        <div class="preview-card" onclick="navigateTo('#testimonials')">
+          <h3>Testimonials</h3>
+          <div class="home-testi-box">
+            <div class="home-testi-author">Arlene Cereza ⭐⭐⭐⭐⭐</div>
+            <p>"Thank you tito sa magandang invitation  na ginawa mo, Ang ganda ganda..."</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. PROJECTS SECTION -->
+    <section id="projects" style="display: none;">
+      <h2>Projects</h2>
+      
+      <div class="projects-grid">
+        
+        <!-- Project 1: Birthday Card -->
+        <div class="bento-card project-item-card">
+          <h3>birthday card</h3>
+          <div class="project-img-box" onclick="openFullView('birthday.png')">
+            <img src="birthday.png" alt="Birthday Card">
+          </div>
+        </div>
+
+        <!-- Project 2: Teachers Day Pubmat -->
+        <div class="bento-card project-item-card">
+          <h3>teachers day pubmat</h3>
+          <div class="teachers-grid-pubmat">
+            <div class="project-img-mini" onclick="openFullView('teachersday1.jpg')"><img src="2.png" alt="Teachers Day 1"></div>
+            <div class="project-img-mini" onclick="openFullView('teachersday2.jpg')"><img src="1.png" alt="Teachers Day 2"></div>
+            <div class="project-img-mini" onclick="openFullView('teachersday2.jpg')"><img src="7.png" alt="Teachers Day 3"></div>
+            <div class="project-img-mini" onclick="openFullView('teachersday2.jpg')"><img src="6.png" alt="Teachers Day 4"></div>
+          </div>
+        </div>
+
+        <!-- Project 3: Invitation Card -->
+        <div class="bento-card project-item-card">
+          <h3>invitation card</h3>
+          <div class="teachers-grid-pubmat">
+          <div class="project-img-mini" onclick="openFullView('invi 1.jpg')">
+            <img src="invi 1.jpg" alt="Invitation Card">
+          </div>
+          <div class="project-img-mini" onclick="openFullView('invi 2.jpg')">
+            <img src="invi 2.jpg" alt="Invitation Card">
+          </div>
+          <div class="project-img-mini" onclick="openFullView('invi 3.jpg')">
+            <img src="invi 3.jpg" alt="Invitation Card">
+          </div>
+          <div class="project-img-mini" onclick="openFullView('invi 4.jpg')">
+            <img src="invi 4.jpg" alt="Invitation Card">
+          </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Digital Invitation Card -->
+      <!-- CANVA WEBSITE LINK CARD -->
+      <div class="bento-card canva-link-card">
+        <div class="canva-card-content">
+          <div class="canva-icon-title">
+            <i class="fa-solid fa-globe"></i>
+            <h3>My Canva Website</h3>
+          </div>
+          <a href="https://owl-d75vmn.my.canva.site/click-the-seal-to-open" target="_blank" class="canva-visit-btn">
+            <i class="fa-solid fa-external-link-alt"></i> Visit Live Canva Site
+          </a>
+        </div>
+      </div>
+         
+        <!-- Project 5.1: Group Video Editing -->
+        <div class="bento-card project-item-card">
+          <h3>Group video editing</h3>
+          <div class="project-img-box" style="background: #000;">
+            <video controls>
+              <source src="video.mp4" type="video/mp4">
+            </video>
+            </div>
+        </div>
+          <!-- Project 5.2: Group Video Editing -->
+        <div class="bento-card project-item-card">
+          <h3>Group video editing</h3>
+          <div class="project-img-box" style="background: #000;">
+            <video controls>
+              <source src="groupvideo.mp4" type="video/mp4">
+            </video>
+            </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. SERVICES SECTION -->
+    <section id="services" style="display: none;">
+      <h2>Services</h2>
+      
+      <div class="services-list-column">
+
+        <div class="bento-card service-row-card">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-photo-film"></i>
+          </div>
+          <div>
+            <h3>Picture/video Editing</h3>
+            <p>Creating high-quality pictures and videos</p>
+          </div>
+        </div>
+
+        <div class="bento-card service-row-card">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <div>
+            <h3>UI/UX website designer</h3>
+            <p>making clean, attractive, and user-friendly web layout at dashboard.</p>
+          </div>
+        </div>
+
+        <div class="bento-card service-row-card">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-pen-nib"></i>
+          </div>
+          <div>
+            <h3>Pubmat & Graphic Design</h3>
+            <p>Creating posters, banners, digital/physical invitation card logos, and edited images using design tools</p>
+          </div>
+        </div>
+
+        <div class="bento-card service-row-card">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <div>
+            <h3>Frontend Basics</h3>
+            <p>Adding simple animations and style to web pages.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+ 
+    <!-- 4. SKILLS SECTION -->
+    <section id="skills" style="display: none;">
+      <h2>My Skills</h2>
+      <div class="skills-grid-box">
+        
+        <div class="bento-card skill-bento-row">
+          <span class="skill-name-label">Canva</span>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%;"></div></div>
+          <span class="skill-pct">95%</span>
+        </div>
+
+        <div class="bento-card skill-bento-row">
+          <span class="skill-name-label">Photo Editing</span>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+          <span class="skill-pct">85%</span>
+        </div>
+
+        <div class="bento-card skill-bento-row">
+          <span class="skill-name-label">Basic JavaScript</span>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 40%;"></div></div>
+          <span class="skill-pct">40%</span>
+        </div>
+
+        <div class="bento-card skill-bento-row">
+          <span class="skill-name-label">Basic HTML</span>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+          <span class="skill-pct">80%</span>
+        </div>
+
+        <div class="bento-card skill-bento-row">
+          <span class="skill-name-label">Basic CSS</span>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+          <span class="skill-pct">80%</span>
+        </div>
+
+        <div class="bento-card skill-bento-row">
+          <span class="skill-name-label">Video Editing</span>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 50%;"></div></div>
+          <span class="skill-pct">50%</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. TESTIMONIALS SECTION -->
+    <section id="testimonials" style="display: none;">
+      <h2>Testimonials</h2>
+      <div class="testimonials-grid">
+        
+        <div class="bento-card testimonial-card">
+          <div class="testi-header">
+            <div class="testi-avatar-mini"><img src="arelene 2.jpg" alt="Arlene"></div>
+            <div>
+              <h4 class="author-name">Arlene cereza</h4>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="testimonial-text">Thank you tito sa magandang invitation  na ginawa mo, Ang ganda ganda</p>
+        </div>
+
+        <div class="bento-card testimonial-card">
+          <div class="testi-header">
+            <div class="testi-avatar-mini"><img src="maryglo.jpg" alt="Mary"></div>
+            <div>
+              <h4 class="author-name">Mary glo</h4>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="testimonial-text">Thank you jonnel sa greetings. nakaka miss kayo ng epas 2024 student ko. galingan mo lang sa pagaaral mo, kaya mo yan!!!</p>
+        </div>
+          
+        <div class="bento-card testimonial-card">
+          <div class="testi-header">
+            <div class="testi-avatar-mini"><img src="fomcom.jpg" alt="FOMCOM"></div>
+            <div>
+              <h4 class="author-name">FOMCOM</h4>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="testimonial-text">Thank you jonnel sa greetings, Much appriciated, sa aming PIO officer. galingan mo palagi sa pag-aaral at pag serve kay God. God may bless you</p>
+        </div>
+
+        <div class="bento-card testimonial-card">
+          <div class="testi-header">
+            <div class="testi-avatar-mini"><img src="alliah.jpeg" alt="Alliah"></div>
+            <div>
+              <h4 class="author-name">alliah</h4>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="testimonial-text">Salamat jonnel sa birthday greetings at sa napakagandang layout!</p>
+        </div>
+    
+        <div class="bento-card testimonial-card">
+          <div class="testi-header">
+            <div class="testi-avatar-mini"><img src="arelene.jpg" alt="Mary"></div>
+            <div>
+              <h4 class="author-name">arlene</h4>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="testimonial-text">Thank you tito sa magandang invitation  na ginawa mo, Ang ganda ganda from ava</p>
+        </div>
+
+        <div class="bento-card testimonial-card">
+          <div class="testi-header">
+            <div class="testi-avatar-mini"><img src="group.jpeg" alt="Mary"></div>
+            <div>
+              <h4 class="author-name">Rizal movie group</h4>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="testimonial-text">thank you jonnel at sa lahat ng mga tumolong sa pag buo ng ating group vedio at sa mga actor na gumanap maraming salamat. galingan nyo pa lagi at makakapasa tayo at gagraduate tayo. again congrats thank you for your cooperation</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. ABOUT SECTION -->
+    <section id="about" style="display: none;">
+      <h2>About</h2>
+      
+      <div class="bento-card about-main-card">
+        <div class="about-info">
+          <h1>I'm Jonnel Cezera</h1>
+          <h3>Freshman IT Student | UI/UX & Creative Tech</h3>
+          <p>I am a freshman IT student passionate about building creative, functional, and user-friendly digital solutions. Technology should look good and be easy to use.</p>
+          
+          <div class="about-btns-group">
+            <a href="#projects" class="btn-work" onclick="navigateTo('#projects')">My Work</a>
+            <a href="#contact" class="btn-contact" onclick="navigateTo('#contact')">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="about-photo-container">
+          <img src="about.jpeg" alt="Jonnel Cezera">
+        </div>
+      </div>
+    </section>
+      
+    <!-- 7. CONTACT SECTION (PINASIMPLE: EMAIL, CALL/SMS, LOCATION LAMANG) -->
+    <section id="contact" style="display: none;">
+      <h2>contacts</h2>
+      <p>Get in touch with me for collaborations, inquiries, or work opportunities.</p>
+
+      <div class="bento-card cta-banner">
+        <div class="banner-content">
+          <i class="fa-solid fa-paper-plane banner-icon"></i>
+          <div>
+            <h3>DM FOR SERVICES</h3>
+            <p>Need custom UI/UX design, Photo editing, or website project? send me a message today!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-grid-clean">
+        
+        <a href="mailto:cerezajonnel1@gmail.com" class="bento-card contact-link">
+          <i class="fa-solid fa-envelope contact-icon"></i>
+          <div>
+            <h3>Email</h3>
+            <p>cerezajonnel1@gmail.com</p>
+          </div>
+        </a>
+
+        <a href="tel:09202244064" class="bento-card contact-link">
+          <i class="fa-solid fa-phone contact-icon"></i>
+          <div>
+            <h3>Call/SMS</h3>
+            <p>09202244064</p>
+          </div>
+        </a>
+
+        <div class="bento-card contact-box-large">
+          <h3><i class="fa-solid fa-location-dot"></i> Location</h3>
+          <p class="location-subtext">Anislag, Daraga, Albay</p>
+          <div class="map-container">
+            <iframe src="https://maps.google.com/maps?q=Anislag,%20Daraga,%20Albay&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FULL VIEW MODAL -->
+  <div id="imageModal" class="full-modal-overlay" onclick="closeFullView()">
+    <span class="full-modal-close">&times;</span>
+    <img id="fullImage" src="" alt="Full View">
+  </div>
+
+  <!-- JAVASCRIPT NAVIGATION & FULL VIEW -->
+  <script>
+    function openFullView(imageSrc) {
+      const modal = document.getElementById('imageModal');
+      const fullImg = document.getElementById('fullImage');
+      fullImg.src = imageSrc;
+      modal.style.display = 'flex';
+    }
+
+    function closeFullView() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+
+    function navigateTo(targetHash){
+      const link = document.querySelector(`.nav-item[href="${targetHash}"]`);
+      if (link) {
+        link.click();
+      } else {
+        const targetId = targetHash.replace('#', '');
+        const navItems = document.querySelectorAll('.nav-item');
+        const sections = document.querySelectorAll('main section');
+        const bodyEl = document.body;
+
+        navItems.forEach(nav => {
+          if (nav.getAttribute('href') === targetHash) {
+            nav.classList.add('active');
+          } else {
+            nav.classList.remove('active');
+          }
+        });
+
+        bodyEl.classList.remove('home-view');
+        sections.forEach(sec => {
+          sec.style.display = (sec.id === targetId) ? 'block' : 'none';
+        });
+        window.scrollTo(0, 0);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){
+      const navItems = document.querySelectorAll('.nav-item');
+      const sections = document.querySelectorAll('main section');
+      const bodyEl = document.body;
+
+      function handleNavigation(targetId){
+        if (targetId === 'home' || targetId === ''){
+          bodyEl.classList.add('home-view');
+          sections.forEach(sec => {
+            sec.style.display = (sec.id === 'home') ? 'block' : 'none';
+          });
+        } else {
+          bodyEl.classList.remove('home-view');
+          sections.forEach(sec => {
+            sec.style.display = (sec.id === targetId) ? 'block' : 'none';
+          });
+        }
+        window.scrollTo(0, 0);
+      }
+
+      navItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          navItems.forEach(nav => nav.classList.remove('active'));
+          this.classList.add('active');
+
+          const targetId = this.getAttribute('href').replace('#', '');
+          handleNavigation(targetId);
+        });
+      });
+      handleNavigation('home');
+    });
+  </script>
+</body>
+</html>
